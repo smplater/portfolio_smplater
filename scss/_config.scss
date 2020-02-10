@@ -1,0 +1,18 @@
+// Variables
+$website-width: 1280px;
+$main-color: #ffbc00;
+$light-color: #f4f4f4;
+$dark-color: #333;
+$bright-color: #f88e79;
+$medium-color: #ccc;
+$bg-image: url("../img/16bit\ city\ aes-1.jpg");
+$contact-image: url("../img/anime-envelope.gif");
+$work-preview-image: url("../img/16\ bit\ aesthetic.jpg");
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
