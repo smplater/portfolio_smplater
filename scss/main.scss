@@ -76,7 +76,7 @@ img {
 #header {
   // Header Home
   &-home {
-    background: $bg-image no-repeat center right / cover;
+    background: $dark-color;
     height: 100vh;
     color: #fff;
 
@@ -94,7 +94,7 @@ img {
 
   // Header Inner
   &-inner {
-    background: $bg-image no-repeat 20% 30% / cover;
+    background: $dark-color;
     height: 5.5rem;
     border-bottom: 3px solid $main-color;
   }
@@ -153,7 +153,7 @@ img {
 
   // Home Section C
   &-c {
-    background: $work-preview-image no-repeat center right / cover;
+    background: #fff;
     height: 200pxs;
     width: 100%;
   }
