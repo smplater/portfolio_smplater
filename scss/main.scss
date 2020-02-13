@@ -76,9 +76,9 @@ img {
 #header {
   // Header Home
   &-home {
-    background: $dark-color;
+    background: $light-color;
     height: 100vh;
-    color: #fff;
+    color: $dark-color;
 
     // Header Content
     .header-content {
@@ -153,7 +153,7 @@ img {
 
   // Home Section C
   &-c {
-    background: #fff;
+    background: $light-color;
     height: 200pxs;
     width: 100%;
   }
