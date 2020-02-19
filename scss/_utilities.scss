@@ -19,24 +19,30 @@
     @extend %btn-shared;
     color: #333;
     background-color: $main-color;
+    border: 1px solid $light-color;
+    border-radius: 30px;
   }
   &-light {
     @extend %btn-shared;
     color: #333;
     background-color: $light-color;
     margin-top: 2rem;
+    border: 1px solid $light-color;
+    border-radius: 30px;
   }
   &-dark {
     @extend %btn-shared;
     color: #f4f4f4;
     background-color: $dark-color;
+    border: 1px solid $light-color;
+    border-radius: 30px;
   }
 }
 
 button[class^="btn-"]:hover,
 a[class^="btn-"]:hover,
 input[class^="btn-"]:hover {
-  background-color: #e0dbf0;
+  background-color: $bright-color;
 }
 
 .lead {
@@ -105,6 +111,7 @@ input[class^="btn-"]:hover {
   }
 }
 
+// Lines
 .section-title {
   font-size: 2rem;
   display: block;
@@ -122,7 +129,9 @@ input[class^="btn-"]:hover {
   margin: 0 auto 1rem auto;
 }
 
-.shadow {
-  background: $main-color;
-  opacity: 0.7;
+.side-line {
+  height: 2px;
+  width: 10rem;
+  background: $bright-color;
+  display: inline;
 }
