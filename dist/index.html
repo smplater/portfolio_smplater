@@ -21,7 +21,9 @@
     <header id="header-home">
       <div class="container">
         <nav id="main-nav">
-          <img src="./img/SP logo1.png" alt="My Portfolio" id="logo" />
+          <div id="logo">
+            <a href="index.html"> <img src="./img/SP-logo.png" alt="SP"/></a>
+          </div>
           <ul>
             <li><a href="index.html" class="current">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -32,83 +34,31 @@
         <div class="header-content">
           <h1>Simone Plater</h1>
           <h3 class="lead">
-            I specialize in content strategy, UI/UX design, and magical user
-            expereinces
+            Salutations! <br>
+            I'm a UI/UX designer and writer who specializes in storytelling, 
+            interaction design, and creating magical user
+            expereinces    <a href="#home-c"><i class="fas fa-magic fa-2x"></i></a>
           </h3>
-        </div>
+      </div>
       </div>
     </header>
-
-    <!-- Section A: Specialize -->
-    <section id="home-a" class="text-center py-2">
-      <div class="container">
-        <h2 class="section-title">I Specialize In</h2>
-        <div class="bottom-line"></div>
-        <p class="lead">
-          Creating meaningful product narratives as well as creating engaging
-          layouts for websites and mobile aplications
-        </p>
-        <div class="specials">
-          <div>
-            <i class="fas fa-file-alt fa-2x"></i>
-            <h3>Conceptualizing</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro
-              voluptatum unde iusto, itaque sit modi voluptatem provident
-              repellendus voluptate id?
-            </p>
-          </div>
-          <div>
-            <i class="fas fa-desktop fa-2x"></i>
-            <h3>UI/UX</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro
-              voluptatum unde iusto, itaque sit modi voluptatem provident
-              repellendus voluptate id?
-            </p>
-          </div>
-          <div>
-            <i class="fas fa-object-ungroup fa-2x"></i>
-            <h3>Visual Design</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro
-              voluptatum unde iusto, itaque sit modi voluptatem provident
-              repellendus voluptate id?
-            </p>
-          </div>
-          <div>
-            <i class="fas fa-thumbs-up fa-2x"></i>
-            <h3>Interaction</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro
-              voluptatum unde iusto, itaque sit modi voluptatem provident
-              repellendus voluptate id?
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
+   
     <!-- Section C: Work Preview -->
     <section id="home-c" class="text-center py-2">
       <div class="container">
-        <h2 class="section-title">
-          Work
-        </h2>
-        <div class="bottom-line"></div>
         <p class="lead">
-          My UI/UX projects are based on with tried and true research techniques
-          that help me best solve my user's problems.
+          My UI/UX projects focus on making digital interactions more meaningful and more pleasant
+          while always directly solving my user's problems.
         </p>
           <div class="items">
             <div class="item">
               <div class="item-image">
-                <img src="./img/items/item1.png" alt="" />
+                <img src="./img/items/myke-simon-atsUqIm3wxo-unsplash.jpg" alt="" />
               </div>
               <div class="item-text">
                 <div class="item-text-wrap">
-                  <p class="item-text-category">Design</p>
-                  <h2 class="item-text-title">Great Gradience</h2>
+                  <p class="item-text-category">UX/UI Design</p>
+                  <h2 class="item-text-title">Film du Jour</h2>
                 </div>
               </div>
             </div>
@@ -118,19 +68,19 @@
             </div>
             <div class="item-text">
               <div class="item-text-wrap">
-                <p class="item-text-category">UI/UX</p>
-                <h2 class="item-text-title">World Expereince</h2>
+                <p class="item-text-category">UI/UX Design</p>
+                <h2 class="item-text-title">FUNNIMATION Redesign</h2>
               </div>
             </div>
           </div>
           <div class="item">
             <div class="item-image">
-              <img src="./img/items/item3.png" alt="" />
+              <img src="./img/items/ivan-henao-2DK-CP_WAuw-unsplash.jpg" alt="" />
             </div>
             <div class="item-text">
               <div class="item-text-wrap">
-                <p class="item-text-category">Design</p>
-                <h2 class="item-text-title">Great Gradience</h2>
+                <p class="item-text-category">Technical Writing</p>
+                <h2 class="item-text-title">Fieldwire Review</h2>
               </div>
             </div>
           </div>
@@ -160,5 +110,26 @@
 
     <!-- Type Effect Tutorial: https://www.youtube.com/watch?v=POX3dT-pB4E -->
     <script src="./dist/js/typewriter.js"></script>
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+  
+    <script>
+    // Smooth Scrolling
+  $('#header-home #header-content, a').on('click', function(event) {
+    if (this.hash !== '') {
+      event.preventDefault();
+      const hash = this.hash;
+      $('html, body').animate(
+        {
+          scrollTop: $(hash).offset().top 
+        },
+        800
+      );
+    }
+  });
+    </script>
   </body>
 </html>
