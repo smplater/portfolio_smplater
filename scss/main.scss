@@ -46,7 +46,6 @@ img {
   display: flex;
   justify-content: space-between;
   padding-top: 1rem;
-  background: #f1e8dc;
 
   ul {
     display: flex;
@@ -74,52 +73,80 @@ img {
   }
 }
 
+// Nav Dark
+#nav-dark {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  background: $dark-color;
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    padding: 1rem 1.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s;
+
+    &:hover {
+      border-color: $medium-color;
+    }
+
+    &.current {
+      border-color: #ff661a;
+    }
+  }
+}
+
 // Header
 #header {
   // Header Home
   &-home {
-    background: #f1e8dc;
-    height: 100vh;
-    color: $dark-color;
+    background: $dark-color;
+    height: 120vh;
+    color: #fff;
+  }
 
-    // Header Content
-    .header-content {
-      text-align: left;
-      padding-top: 20%;
-      padding-left: 20px;
+  // Header Content
+  &-content {
+    background: $dark-color;
+    text-align: left;
+    padding-top: 10rem;
+    padding-left: 20px;
 
-      img {
-        display: flex;
-        align-self: flex-end;
-        height: 200px;
-        width: auto;
-      }
-
-      h1 {
-        font-size: 4rem;
-        line-height: 1.2;
-      }
-
-      a {
-        .fas {
-          color: $dark-color;
-          padding-left: 1rem;
-
-          &:hover {
-            color: $bright-color;
-            transform: rotate(40deg);
-            transition: ease-in 0.9s;
-          }
-        }
-      }
+    h1 {
+      font-size: 5rem;
+      line-height: 1.2;
+    }
+    .bg-img {
+      float: right;
+      margin-bottom: 30px;
+      height: 70vh;
+      width: auto;
+      z-index: -1;
+    }
+    .about-img {
+      float: right;
+      margin-bottom: 30px;
+      height: 70vh;
+      width: 70%;
+      z-index: 1;
     }
   }
 
   // Header Inner
   &-inner {
-    background: #f1e8dc;
+    background: $light-color;
+    color: #333;
     height: 5.5rem;
-    border-bottom: 3px solid $bright-color;
   }
 }
 
@@ -127,8 +154,6 @@ img {
 #home {
   // Home Section A
   &-a {
-    background-image: linear-gradient(#f1e8dc, #ffaa80);
-
     .specials {
       margin-top: 3rem;
       display: grid;
@@ -176,66 +201,48 @@ img {
 
   // Home Section C
   &-c {
-    background: #f1e8dc;
+    color: #fff;
+    a {
+      font-size: 1rem;
+    }
   }
 }
 
 // About Sections
+// About A
 #about {
-  // About A
+  background: $dark-color;
   &-a {
-    background: #f1e8dc;
     .about-info {
       display: grid;
-      grid-template-areas:
-        "bioimage bio bio"
-        "aw1 aw2 aw3";
-      grid-gap: 1.2rem;
-    }
+      grid-template-areas: "bioimage bio bio";
+      grid-gap: 2rem;
+      margin-bottom: 2rem;
 
-    // Grid Areas
-    .bio-image {
-      grid-area: bioimage;
-      height: 70vh;
-      width: auto;
-    }
+      // Grid Areas
+      .bio-image {
+        grid-area: bioimage;
+        height: 70vh;
+        width: auto;
+        outline: 3px solid $bright-color;
+        outline-offset: 10px;
 
-    .bio {
-      background: #f1e8dc;
-      grid-area: bio;
-      border-left: 3px solid $bright-color;
-      padding: 0.8rem;
-    }
+        img {
+          height: 70vh;
+          width: auto;
+        }
+      }
 
-    .award-1 {
-      grid-area: aw1;
+      .bio {
+        grid-area: bio;
+        border-left: 3px solid $bright-color;
+        padding: 0.8rem;
+      }
     }
-    .award-2 {
-      grid-area: aw2;
-    }
-    .award-3 {
-      grid-area: aw3;
-    }
-
-    .award-1 .fas,
-    .award-2 .fas,
-    .award-3 .fas {
-      color: $main-color;
-      margin: 1rem;
-    }
-  }
-
-  // About B: Education -- Hidden
-  &-b {
-    display: none;
-    background-image: linear-gradient(#ffaa80, #f1e8dc);
   }
 
   // About C: Progress Bars
   &-c {
-    .container {
-      background-image: linear-gradient(#ffaa80, #f1e8dc);
-    }
     .progress {
       overflow: hidden;
       height: 20px;
@@ -254,7 +261,7 @@ img {
 
   // About D: Testemonials
   &-d {
-    background: #f1e8dc;
+    background: $light-color;
     .testemonials {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -300,8 +307,6 @@ img {
 // Fieldwire Review
 #Fieldwire-content {
   h1 {
-    background: url("../img/ricardo-gomez-angel-sYK-jN0sKBY-unsplash.jpg")
-      no-repeat center right / cover;
     height: 80vh;
     font-size: 3rem;
     color: #fff;
@@ -371,6 +376,302 @@ img {
     h3 {
       text-align: center;
     }
+  }
+}
+
+// Funnimation Redesign
+#main-content-fun {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .side-by-side {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+    height: 600px;
+    width: 600px;
+    padding: 10px;
+  }
+}
+
+// Audubon Labs
+#main-content-AL {
+  .dark-purple {
+    color: #681524;
+  }
+  .orange {
+    color: #f05633;
+  }
+  .peach {
+    color: #f6866d;
+  }
+  .tan {
+    color: #f3dcbc;
+  }
+
+  .circle-dark {
+    float: right;
+    height: 50px;
+    width: 50px;
+    background-color: #681524;
+    border-radius: 50%;
+  }
+  .circle-orange {
+    float: right;
+    height: 50px;
+    width: 50px;
+    background-color: #f05633;
+    border-radius: 50%;
+  }
+  .circle-peach {
+    height: 50px;
+    width: 50px;
+    background-color: #f6866d;
+    border-radius: 50%;
+  }
+
+  .circle-tan {
+    height: 50px;
+    width: 51px;
+    background-color: #f3dcbc;
+    border-radius: 50%;
+  }
+}
+// Show Off
+#high-fil {
+  .container {
+    padding: 0;
+    margin: 0;
+  }
+  h2 {
+    font-family: "Gugi", cursive;
+    font-size: 2rem;
+    color: #f05633;
+    padding-bottom: 10px;
+  }
+  .AL-FONT {
+    font-family: "Gugi", cursive;
+    font-size: 7rem;
+    color: #f05633;
+  }
+
+  .show-off-info {
+    background: url("../img/Audubon/audio-audio-mixer-controls-electronics-690779.jpg")
+      no-repeat center center/cover;
+    height: 70vh;
+    width: auto;
+
+    .page-info {
+      padding-top: 15px;
+      h3 {
+        background: rgba(240, 86, 51, 0.3);
+        color: #fff;
+        padding-left: 3rem;
+        width: 25%;
+      }
+    }
+
+    h2 {
+      color: #f05633;
+      font-size: 3rem;
+      position: sticky;
+      top: 0;
+      padding: 5px;
+    }
+  }
+
+  .business {
+    padding: 30px;
+    font-size: 1.7rem;
+    height: 28rem;
+
+    h1 {
+      font-family: Gugi, cursive;
+      font-size: 2.3rem;
+      color: #fff;
+      text-transform: uppercase;
+      padding: 0 10rem;
+    }
+
+    img {
+      display: block;
+      height: 10rem;
+      width: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .overview {
+    padding: 0;
+
+    h1 {
+      font-family: Gugi, cursive;
+      font-size: 3rem;
+      color: #f05633;
+    }
+    h3 {
+      font-size: 1.2rem;
+    }
+    p {
+      padding: 0 90px;
+    }
+  }
+  .Music {
+    background: url(../img/Audubon/Home.png) no-repeat center center/cover;
+    height: 60vh;
+    width: auto;
+    padding: 0;
+  }
+}
+
+// Section B: My Role
+#AL-my-role {
+  display: grid;
+  grid-template-columns: 500px auto;
+
+  .role-info {
+    background: $dark-color;
+    h1 {
+      font-family: Gugi, cursive;
+      font-size: 2rem;
+      padding-left: 3rem;
+      padding-top: 1.5rem;
+      color: #f05633;
+    }
+    h3 {
+      font-family: Gugi, cursive;
+      font-size: 1.5rem;
+      color: #fff;
+      padding-left: 3rem;
+    }
+    p {
+      padding-left: 3rem;
+      padding-right: 3rem;
+      padding-bottom: 2rem;
+      padding-top: 2rem;
+      color: #fff;
+    }
+  }
+
+  .gia {
+    img {
+      height: 400px;
+      width: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+// AL Research
+#AL-Research {
+  .research-info {
+    h1 {
+      font-family: Gugi, cursive;
+      font-size: 3rem;
+      color: #f05633;
+      padding-top: 20px;
+    }
+
+    h3 {
+      padding: 0 5rem;
+    }
+    .pages {
+      padding: 20px;
+      img {
+        height: 60vh;
+        width: auto;
+      }
+      p {
+        padding-top: 10px;
+      }
+    }
+    .user-personas {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      h2 {
+        font-family: Gugi, cursive;
+      }
+
+      .felix {
+        background: $light-color;
+        color: $dark-color;
+      }
+      .joan {
+        background: $dark-color;
+        color: #f05633;
+      }
+      .matteo {
+        background: $light-color;
+        color: $dark-color;
+      }
+    }
+
+    .use-survey {
+      list-style-type: circle;
+      list-style-position: inside;
+    }
+  }
+  .themes {
+    padding: 20px;
+    p {
+      padding: 0 100px;
+    }
+  }
+}
+
+// Process
+#process {
+  h1 {
+    font-family: Gugi, cursive;
+    font-size: 3.2rem;
+    color: #f05633;
+  }
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.2rem;
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    height: 30rem;
+    width: 100%;
+
+    .card-bg {
+      background: #f05633;
+      color: #fff;
+      h3 {
+        font-size: 1.3rem;
+        .fas {
+          color: #f05633;
+        }
+      }
+    }
+
+    p {
+      padding: 20px;
+    }
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.7);
+  }
+}
+
+// Outcome
+#outcome {
+  h1 {
+    font-family: Gugi, cursive;
+    font-size: 3rem;
+    color: #f05633;
+  }
+
+  h3 {
+    font-family: 2rem;
   }
 }
 
@@ -473,6 +774,3 @@ img {
     }
   }
 }
-
-// Import Media Queries
-@import "media";
