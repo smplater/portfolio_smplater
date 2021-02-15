@@ -1,18 +1,11 @@
 // Variables
 $website-width: 1280px;
-$main-color: #ffbc00;
-$light-color: #f4f4f4;
-$dark-color: #333;
-$bright-color: #f88e79;
+$main-color: #eb916e;
+$secondary-color: #a3543d;
+$accent_1-color: #e4b2a3;
+$accent_2-color: #dde3ed;
+$accent_3-color: #557571;
+$light-color: #f4f4f4f4;
 $medium-color: #ccc;
-$bg-image: url("../img/16bit\ city\ aes-1.jpg");
-$contact-image: url("../dist/img/8bit\ room.gif");
-$work-preview-image: url("../img/16\ bit\ aesthetic.jpg");
-// Set Text Color
-@function set-text-color($color) {
-  @if (lightness($color) > 50) {
-    @return #000;
-  } @else {
-    @return #fff;
-  }
-}
+$dark-color: #333;
+$bg-image: url("../img/showcase.jpg");
