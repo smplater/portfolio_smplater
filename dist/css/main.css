@@ -205,31 +205,40 @@ img {
   width: 100%; }
 
 #logo {
-  height: 35px;
-  width: 35px;
-  padding-left: 2rem;
-  margin-bottom: 2rem; }
+  width: auto;
+  height: 80px;
+  padding-left: 1.5%;
+}
 
 #main-nav {
   display: flex;
   justify-content: space-between;
   padding-top: 1rem;
-  background: #f1e8dc; }
-  #main-nav ul {
-    display: flex; }
-  #main-nav li {
-    padding: 1rem 1.5rem; }
-  #main-nav a {
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    padding: 1rem 1.5rem;
+  }
+
+  a {
     text-decoration: none;
-    color: #333;
     text-transform: uppercase;
     border-bottom: 3px transparent solid;
     padding-bottom: 0.5rem;
-    transition: border-color 0.5s; }
-    #main-nav a:hover {
-      border-color: #ccc; }
-    #main-nav a.current {
-      border-color: #ff661a; }
+    transition: border-color 0.5s;
+
+    &:hover {
+      border-color: $medium-color;
+    }
+
+    &.current {
+      border-color: $secondary-color;
+    }
+  }
+}
 
 #header-home {
   background: #f1e8dc;
