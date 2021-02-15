@@ -1,6 +1,8 @@
+@import "config";
+
 .container {
   max-width: $website-width;
-  padding: 0 1.5rem;
+  padding: 0, 1.4rem;
   margin: auto;
   overflow: hidden;
 }
@@ -9,129 +11,103 @@
 %btn-shared {
   display: inline-block;
   padding: 0.8rem 2rem;
-  transition: all 0.5s;
+  transition: all;
   border: none;
   cursor: pointer;
+  border-radius: 4rem;
 }
 
 .btn {
   &-main {
     @extend %btn-shared;
-    color: #333;
+    color: #ffffff;
     background-color: $main-color;
-    border: 1px solid $light-color;
-    border-radius: 30px;
   }
   &-light {
     @extend %btn-shared;
     color: #333;
-    background-color: $light-color;
-    margin-top: 2rem;
-    border: 1px solid $light-color;
-    border-radius: 30px;
+    background-color: $accent_1-color;
   }
   &-dark {
     @extend %btn-shared;
-    color: #f4f4f4;
-    background-color: $dark-color;
-    border: 1px solid $light-color;
-    border-radius: 30px;
+    color: #ffffff;
+    background-color: $secondary-color;
   }
 }
 
 button[class^="btn-"]:hover,
 a[class^="btn-"]:hover,
 input[class^="btn-"]:hover {
-  background-color: $bright-color;
+  background-color: $main-color;
+  transition: ease 0.5s;
+  color: #ffffff;
 }
 
 .lead {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   margin-bottom: 2rem;
-}
-
-.lead-2 {
-  font-size: 1.2rem;
-  margin-bottom: 0.7rem;
 }
 
 .text-center {
   text-align: center;
 }
 
-// Backgrounds
-.bg {
-  &-main {
-    background: $main-color;
-    color: set-text-color($main-color);
-  }
-  &-dark {
-    background: $dark-color;
-    color: set-text-color($dark-color);
-  }
-  &-light {
-    background: $light-color;
-    color: set-text-color($light-color);
-  }
-  &-medium {
-    background: $medium-color;
-    color: set-text-color($medium-color);
-  }
+.section-title {
+  font-size: 3rem;
 }
 
 // Padding
 .py {
   &-1 {
-    padding: 1rem 0;
+    padding: 1rem 0rem;
   }
   &-2 {
-    padding: 2rem 0;
+    padding: 2rem 0rem;
   }
   &-3 {
-    padding: 3rem 0;
+    padding: 3rem 0rem;
   }
   &-4 {
-    padding: 4rem 0;
+    padding: 4rem 0rem;
   }
 }
 
 // Margin
 .my {
   &-1 {
-    margin: 1rem 0;
+    margin: 1rem 0rem;
   }
   &-2 {
-    margin: 2rem 0;
+    margin: 2rem 0rem;
   }
   &-3 {
-    margin: 3rem 0;
+    margin: 3rem 0rem;
   }
   &-4 {
-    margin: 4rem 0;
+    margin: 4rem 0rem;
   }
 }
 
-// Lines
-.section-title {
-  font-size: 2rem;
-  display: block;
-  padding-bottom: 0.5rem;
-  text-align: center;
-  font-weight: 100;
-  text-transform: uppercase;
-}
+// Circles
+.circle {
+&-sec {
+  float: right;
+  position: absolute;
+  top: 30%;
+  right:0;
+   background-color: $secondary-color;
+   height: 20rem;
+   width: 20rem; 
+   border: 1px solid $secondary-color;
+   border-radius: 50%;
+} 
+ &-fir {
+   float: right;
 
-.bottom-line {
-  height: 2px;
-  width: 3rem;
-  background: $bright-color;
-  display: block;
-  margin: 0 auto 1rem auto;
-}
-
-.side-line {
-  height: 2px;
-  width: 10rem;
-  background: $bright-color;
-  display: inline;
+   background-color: $accent_3-color;
+   height: 5rem;
+   width: 5rem;
+  border: 1px solid $accent_3-color;
+  border-radius: 50%;
+ }
 }
